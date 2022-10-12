@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: linear-gradient(190deg,rgb(216, 51, 194),rgb(134, 93, 189));  /*Color de fondo*/
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    min-height: 100vh;
+}
+header{
+    font-size: 1.5rem;
+}
+header,form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*------------------------ MODIFICANDO LA CAJA DE TEXTO --------------------------*/
+form input, form button{  /*Modificando tamaño de texto*/
+    padding: 0.5rem;  /*Tamñao del cuadro de texto*/
+    font-size: 2rem;  /*tamaño de letra*/
+    border: none;  
+    background: white; 
+}
+/*---------------------------------------------------------------------------------*/
+form button{
+    color: #ecc514;  /*Color del icono*/
+    background: white;
+    cursor: pointer;  /*cambio de forma de puntero a manita*/
+    transition: all 0.3s ease; /*Efecto de cambio de color del boton (se elige el color en el :hover) */
+}
+form button:hover{
+    background: #ecc514;
+    color: white;
+}
+/********************************************************* ESTILO AL GENERAR LAS TAREAS **************************************************************/
+/*--Algo muy importante a recordar es que primero se debe generar en el scrip los cards o lo que valla a ser dinamico, despues se le da el estilo--*/

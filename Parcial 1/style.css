@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*adaptandose al tamaño de la pantalla*/
+}
+body{
+    background-image: linear-gradient(190deg,rgb(216, 51, 194),rgb(134, 93, 189));  /*Color de fondo*/
+    color: white;
+    font-family: 'Poppins',sans-serif;
+    min-height: 100vh; /*cubriendo el 100% de la pantalla*/
+}
+header{
+    font-size: 1.5rem;
+
+}
+header,form {
+    min-height: 20vh;  /*Altural minima top*/
+    display:flex;  /*Usando la propiedad flex para usar otras popiedades*/
+    justify-content: center; /*una de las propiedades flex*/
+    align-items: center;
+}
+/*------------------------ MODIFICANDO LA CAJA DE TEXTO --------------------------*/
+form input, form button{  /*Modificando tamaño de texto*/
+    padding: 0.5rem;  /*Tamñao del cuadro de texto*/
+    font-size: 2rem;  /*tamaño de letra*/
+    border: none;  
+    background: white; 
+}
+/*---------------------------------------------------------------------------------*/
+form button{
+    color: #ecc514;  /*Color del icono*/
+    background: white;
+    cursor: pointer;  /*cambio de forma de puntero a manita*/
+    transition: all 0.3s ease; /*Efecto de cambio de color del boton (se elige el color en el :hover) */
+}
+form button:hover{
+    background: #ecc514;
+    color: white;
+}
+/********************************************************* ESTILO AL GENERAR LAS TAREAS **************************************************************/
+/*--Algo muy importante a recordar es que primero se debe generar en el scrip los cards o lo que valla a ser dinamico, despues se le da el estilo--*/
+.task-container{
+display: flex; 
+justify-content: center;
+align-items: center;   
+}
+.view-list{
+    min-width: 30%;
+    list-style: none;
+}
+.newContaineradd{
+    margin: 0.5rem;
+    background: white;
+    color:black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.8s ease;  /*-- Al eliminar o apretar el boton ara este efecto--*/
+}
+.newContaineradd li {
+    flex: 1;
+}
+.button-trash,
+.complete-task{
+    background: rgb(182, 17, 17);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.complete-task{
+    background: green;
+}
+.task-item{
+    padding: 0rem 0.5rem;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;  /*con esta propiedad se evita que el icono tenga su accion y no facilite borrar*/
+}
+.task-completed{
+    text-decoration: line-through; /*Tachabndo linea*/
+    opacity: 0.5;
+}
+/*-------------- MENSAJE DE RROR -------------*/
+.warning {  /*-----------Este contendor no se ve amenos que alla un error en el cual se antiva con el javascrip----------*/
+    width: 100%;
+    padding: 1rem;
+    display: none;  /*--------Aqui ocultamos todos sus estilos y NO se muestra el contendor ------*/
+    background-color: #ec1414;
+  }
+.warning p {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+ 
